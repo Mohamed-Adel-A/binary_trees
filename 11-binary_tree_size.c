@@ -18,13 +18,13 @@ size_t binary_tree_size(const binary_tree_t *tree)
 	current = (binary_tree_t *) tree;
 	if (current->left != NULL)
 	{
-		left_ret = binary_tree_height(current->left);
+		left_ret = binary_tree_size(current->left);
 		left_ret += 1;
 	}
 
 	if (current->right != NULL)
 	{
-		right_ret = binary_tree_height(current->right);
+		right_ret = binary_tree_size(current->right);
 		right_ret += 1;
 	}
 
