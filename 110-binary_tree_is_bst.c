@@ -34,8 +34,10 @@ int is_bst(const binary_tree_t *tree, int key)
     }
 
 	printf("tree: %d\n", tree->n);
-	printf("left: %d\n", tree->left->n);
-	printf("right: %d\n", tree->right->n);
+	if (tree->left != NULL)
+		printf("left: %d\n", tree->left->n);
+	if (tree->right != NULL)
+		printf("right: %d\n", tree->right->n);
 	printf("left_ret: %d", left_ret);
 	printf("right_ret: %d", right_ret);
 	return (left_ret * right_ret);
