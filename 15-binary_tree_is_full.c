@@ -19,13 +19,13 @@ int binary_tree_is_full(const binary_tree_t *tree)
 	if (current->left != NULL)
 	{
 		left_ret = binary_tree_is_full(current->left);
-		left_ret = 1;
+		left_ret *= 1;
 	}
 
 	if (current->right != NULL)
 	{
 		right_ret = binary_tree_is_full(current->right);
-		right_ret = 1;
+		right_ret *= 1;
 	}
 
 	if (left_ret == 0 && right_ret == 0)
