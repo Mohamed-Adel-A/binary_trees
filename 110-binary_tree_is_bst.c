@@ -91,9 +91,11 @@ int is_bst_right(const binary_tree_t *tree, int key)
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
 	int left_ret = 1, right_ret = 1;
-
-    if (tree == NULL)
-        return (0);
+	
+	if (tree == NULL)
+	{
+		return (0);
+	}
 
 	if (tree->left != NULL)
 	{
