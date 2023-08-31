@@ -28,6 +28,6 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 
 	if (right_ret == 0 && left_ret == 0)
 		return (1);
-	
+
 	return (left_ret + right_ret);
 }
