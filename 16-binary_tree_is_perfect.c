@@ -105,6 +105,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int balanced, full;
 
+	if (tree == NULL)
+		return (0);
 	/* if balance retrun 0 */
 	balanced = binary_tree_balance(tree);
 
