@@ -17,8 +17,7 @@ int binary_tree_is_bst(const binary_tree_t *tree)
         return (0);
 
     printf("tree: %d\n", tree->n);
-    
-    printf("right: %d\n", tree->n);
+
     if (tree->left != NULL)
     {
         printf("left: %d\n", tree->left->n);
