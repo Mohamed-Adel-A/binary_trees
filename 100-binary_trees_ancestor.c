@@ -15,10 +15,10 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 	if (frist == NULL || second == NULL)
 		return (NULL);
 
-	first_current = first;
+	first_current = (binary_tree_t *) first;
 	while (first_current != NULL)
 	{
-		second_current = second;
+		second_current = (binary_tree_t *) second;
 		while (second_current != NULL)
 		{
 			if (first_current == second_current)
