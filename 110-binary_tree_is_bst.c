@@ -97,12 +97,12 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 
 	if (tree->left != NULL)
 	{
-		left_ret = is_bst_left(tree->left, tree->n)
+		left_ret = is_bst_left(tree->left, tree->n);
 	}
 
 	if (tree->right != NULL)
 	{
-		right_ret = is_bst_right(tree->right, tree->n)
+		right_ret = is_bst_right(tree->right, tree->n);
 	}
     return (left_ret * right_ret);
 }
