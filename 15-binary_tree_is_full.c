@@ -7,7 +7,7 @@
  * Return: the height of a binary tree,
  *         If tree is NULL, your function must return 0
  */
-int binary_tree_is_full(const binary_tree_t *tree);
+int binary_tree_is_full(const binary_tree_t *tree)
 {
 	binary_tree_t *current;
 	size_t left_ret = 0, right_ret = 0;
