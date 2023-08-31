@@ -1,5 +1,13 @@
 #include "binary_trees.h"
 
+/**
+ * is_bst_left -  checks if a binary tree is a valid Binary Search Tree
+ * @tree: is a pointer to the root node of the tree to check
+ * @key: key value to be checked
+ *
+ * Return: return 1 if tree is a valid BST, and 0 otherwise
+ *         If tree is NULL, return 0
+*/
 int is_bst_left(const binary_tree_t *tree, int key)
 {
     int left_ret = 1, right_ret = 1;
@@ -32,7 +40,14 @@ int is_bst_left(const binary_tree_t *tree, int key)
 	return (left_ret * right_ret);
 }
 
-
+/**
+ * is_bst_right -  checks if a binary tree is a valid Binary Search Tree
+ * @tree: is a pointer to the root node of the tree to check
+ * @key: key value to be checked
+ *
+ * Return: return 1 if tree is a valid BST, and 0 otherwise
+ *         If tree is NULL, return 0
+*/
 int is_bst_right(const binary_tree_t *tree, int key)
 {
     int left_ret = 1, right_ret = 1;
@@ -73,7 +88,6 @@ int is_bst_right(const binary_tree_t *tree, int key)
  * Return: return 1 if tree is a valid BST, and 0 otherwise
  *         If tree is NULL, return 0
 */
-
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
 	int left_ret = 1, right_ret = 1;
