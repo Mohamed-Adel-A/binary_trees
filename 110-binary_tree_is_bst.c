@@ -49,32 +49,31 @@ int is_bst_left(const binary_tree_t *tree, int key)
 */
 int is_bst_right(const binary_tree_t *tree, int key)
 {
-    int left_ret = 1, right_ret = 1;
+	int left_ret = 1, right_ret = 1;
 
-    if (tree->left != NULL)
-    {
-        if (tree->left->n < tree->n && tree->left->n > key)
-        {
-            left_ret = is_bst_right(tree->left, key);
-        }
-        else
-        {
-            left_ret = 0;
-        }
-            
-    }
+	if (tree->left != NULL)
+	{
+		if (tree->left->n < tree->n && tree->left->n > key)
+		{
+			left_ret = is_bst_right(tree->left, key);
+		}
+		else
+		{
+			left_ret = 0;
+		}
+	}
 
-    if (tree->right != NULL)
-    {
-        if (tree->right->n > tree->n && tree->right->n > key)
-        {
-            right_ret = is_bst_right(tree->right, key);
-        }
-        else
-        {
-            right_ret = 0;
-        }
-    }
+	if (tree->right != NULL)
+	{
+		if (tree->right->n > tree->n && tree->right->n > key)
+		{
+			right_ret = is_bst_right(tree->right, key);
+		}
+		else
+		{
+			right_ret = 0;
+		}
+	}
 
 	return (left_ret * right_ret);
 }
@@ -90,7 +89,7 @@ int is_bst_right(const binary_tree_t *tree, int key)
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
 	int left_ret = 1, right_ret = 1;
-	
+
 	if (tree == NULL)
 	{
 		return (0);
@@ -105,5 +104,6 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 	{
 		right_ret = is_bst_right(tree->right, tree->n);
 	}
-    return (left_ret * right_ret);
+
+	return (left_ret * right_ret);
 }
