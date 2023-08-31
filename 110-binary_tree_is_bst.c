@@ -16,8 +16,12 @@ int binary_tree_is_bst(const binary_tree_t *tree)
     if (tree == NULL)
         return (0);
 
+    printf("tree: %d\n", tree->n);
+    
+    printf("right: %d\n", tree->n);
     if (tree->left != NULL)
     {
+        printf("left: %d\n", tree->left->n);
         if (tree->left->n < tree->n)
         {
             left_ret = binary_tree_is_bst(tree->left);
@@ -27,6 +31,7 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 
     if (tree->right != NULL)
     {
+        printf("right: %d\n", tree->right->n);
         if (tree->right->n > tree->n)
         {
             right_ret = binary_tree_is_bst(tree->right);
@@ -34,5 +39,7 @@ int binary_tree_is_bst(const binary_tree_t *tree)
         right_ret = 0;
     }
 
+    printf("left_ret = %d\n", left_ret);
+    printf("right_ret = %d\n", right_ret);
     return (left_ret * right_ret);
 }
