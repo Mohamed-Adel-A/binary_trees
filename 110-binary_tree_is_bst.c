@@ -8,7 +8,7 @@ int is_bst(const binary_tree_t *tree, int key)
     {
         if (tree->left->n < tree->n && tree->left->n < key)
         {
-            left_ret = is_bst(tree->left);
+            left_ret = is_bst(tree->left, key);
         }
         else
         {
@@ -21,7 +21,7 @@ int is_bst(const binary_tree_t *tree, int key)
     {
         if (tree->right->n > tree->n && tree->right->n > key)
         {
-            right_ret = is_bst(tree->right);
+            right_ret = is_bst(tree->right, key);
         }
         else
         {
@@ -47,5 +47,5 @@ int binary_tree_is_bst(const binary_tree_t *tree)
     if (tree == NULL)
         return (0);
 
-    return (is_bst(tree));
+    return (is_bst(tree, tree->n));
 }
