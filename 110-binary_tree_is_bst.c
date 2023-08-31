@@ -25,7 +25,10 @@ int binary_tree_is_bst(const binary_tree_t *tree)
         {
             left_ret = binary_tree_is_bst(tree->left);
         }
-        left_ret = 0;
+        else
+        {
+            left_ret = 0;
+        }
     }
 
     if (tree->right != NULL)
@@ -35,7 +38,10 @@ int binary_tree_is_bst(const binary_tree_t *tree)
         {
             right_ret = binary_tree_is_bst(tree->right);
         }
-        right_ret = 0;
+        else
+        {
+            right_ret = 0;
+        }
     }
 
     printf("left_ret = %d\n", left_ret);
