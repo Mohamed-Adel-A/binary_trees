@@ -29,13 +29,6 @@ int is_bst_left(const binary_tree_t *tree, int key)
         }
     }
 
-	printf("tree: %d\n", tree->n);
-	if (tree->left != NULL)
-		printf("left: %d\n", tree->left->n);
-	if (tree->right != NULL)
-		printf("right: %d\n", tree->right->n);
-	printf("left_ret: %d\n", left_ret);
-	printf("right_ret: %d\n", right_ret);
 	return (left_ret * right_ret);
 }
 
@@ -69,13 +62,6 @@ int is_bst_right(const binary_tree_t *tree, int key)
         }
     }
 
-	printf("tree: %d\n", tree->n);
-	if (tree->left != NULL)
-		printf("left: %d\n", tree->left->n);
-	if (tree->right != NULL)
-		printf("right: %d\n", tree->right->n);
-	printf("left_ret: %d\n", left_ret);
-	printf("right_ret: %d\n", right_ret);
 	return (left_ret * right_ret);
 }
 
