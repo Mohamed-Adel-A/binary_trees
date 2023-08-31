@@ -109,10 +109,10 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	balanced = binary_tree_balance(tree);
 
 	/* changed balanced from number to 0 not balanced , 1 balanced */
-	if (balance == 0)
+	if (balanced == 0)
 		balanced = 1;
 	else
-		balanced = 0
+		balanced = 0;
 
 	/* if full return 1 */
 	full = binary_tree_is_full(tree);
