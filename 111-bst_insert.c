@@ -35,7 +35,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 				current = current->left;
 			else
 			{
-				new_node = (bst_t *) binary_tree_node(NULL, value);
+				new_node = (bst_t *) binary_tree_node(current, value);
 				current->left = new_node;
 				return (new_node);
 			}
@@ -46,7 +46,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 				current = current->right;
 			else
 			{
-				new_node = (bst_t *) binary_tree_node(NULL, value);
+				new_node = (bst_t *) binary_tree_node(current, value);
 				current->right = new_node;
 				return (new_node);
 			}
