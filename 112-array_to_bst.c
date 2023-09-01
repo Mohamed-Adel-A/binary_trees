@@ -10,10 +10,10 @@
  */
 bst_t *array_to_bst(int *array, size_t size)
 {
-	bst_t *root;
+	bst_t *root, *node;
 	size_t i;
 
-	if (array == NULL || array[0] == NULL)
+	if (array == NULL)
 		return (NULL);
 
 	root = bst_insert(NULL, array[0]);
@@ -26,5 +26,6 @@ bst_t *array_to_bst(int *array, size_t size)
 	{
 		node = bst_insert(&root, array[i]);
 	}
+
 	return (root);
 }
