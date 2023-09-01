@@ -25,5 +25,5 @@ bst_t *bst_insert(bst_t **tree, int value)
 		*tree = new_node;
 		return (new_node);
 	}
-	return;
+	return (NULL);
 }
