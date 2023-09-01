@@ -25,6 +25,8 @@ bst_t *array_to_bst(int *array, size_t size)
 	for (i = 1 ; i < size ; i++)
 	{
 		node = bst_insert(&root, array[i]);
+		if (node == NULL)
+			return (NULL);
 	}
 
 	return (root);
