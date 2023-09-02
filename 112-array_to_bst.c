@@ -20,6 +20,7 @@ bst_t *array_to_bst(int *array, size_t size)
 
 	root = bst_insert(NULL, array[0]);
 	printf("array[0] value: %d\n", array[0]);
+	printf("root address: %p\n", (void *)root);
 	if (root == NULL)
 	{
 		return (NULL);
