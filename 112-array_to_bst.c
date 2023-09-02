@@ -22,8 +22,8 @@ bst_t *array_to_bst(int *array, size_t size)
 		return (NULL);
 	}
 
-	print ("root address: %d\n", root);
-	print ("root value: %d\n", root->n);
+	printf("root address: %d\n", root);
+	printf("root value: %d\n", root->n);
 	for (i = 1 ; i < size ; i++)
 	{
 		node = bst_insert(&root, array[i]);
