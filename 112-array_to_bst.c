@@ -19,6 +19,7 @@ bst_t *array_to_bst(int *array, size_t size)
 		return (NULL);
 
 	root = bst_insert(NULL, array[0]);
+	printf("array[0] value: %d\n", array[0]);
 	if (root == NULL)
 	{
 		return (NULL);
