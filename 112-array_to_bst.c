@@ -14,6 +14,7 @@ bst_t *array_to_bst(int *array, size_t size)
 	size_t i;
 
 	printf("Start!\n");
+	printf("array address: %p\n", (void *)array);
 	if (array == NULL)
 		return (NULL);
 
