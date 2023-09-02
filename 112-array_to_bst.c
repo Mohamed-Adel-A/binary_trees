@@ -13,6 +13,7 @@ bst_t *array_to_bst(int *array, size_t size)
 	bst_t *root, *node;
 	size_t i;
 
+	printf("Start!\n");
 	if (array == NULL)
 		return (NULL);
 
