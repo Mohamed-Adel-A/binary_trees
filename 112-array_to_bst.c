@@ -13,27 +13,19 @@ bst_t *array_to_bst(int *array, size_t size)
 	bst_t *root = NULL, *node;
 	size_t i;
 
-	printf("Start!\n");
-	printf("array address: %p\n", (void *)array);
 	if (array == NULL)
 		return (NULL);
 
 	root = bst_insert(&root, array[0]);
-	printf("array[0] value: %d\n", array[0]);
-	printf("root address: %p\n", (void *)root);
 	if (root == NULL)
 	{
 		return (NULL);
 	}
 
-	printf("root address: %p\n", (void *)root);
-	printf("root value: %d\n", root->n);
 	for (i = 1 ; i < size ; i++)
 	{
-		node = bst_insert(&root, array[i]);
+		bst_insert(&root, array[i]);
 	}
-	printf("------------------------------\n");
-	printf("root address: %p\n", (void *)root);
-	printf("root value: %d\n", root->n);
+
 	return (root);
 }
