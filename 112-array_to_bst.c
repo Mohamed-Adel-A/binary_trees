@@ -34,6 +34,8 @@ bst_t *array_to_bst(int *array, size_t size)
 		if (node == NULL)
 			return (NULL);
 	}
-
+	printf("------------------------------\n");
+	printf("root address: %p\n", (void *)root);
+	printf("root value: %d\n", root->n);
 	return (root);
 }
