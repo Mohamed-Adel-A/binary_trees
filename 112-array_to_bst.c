@@ -10,7 +10,7 @@
  */
 bst_t *array_to_bst(int *array, size_t size)
 {
-	bst_t *root, *node;
+	bst_t *root = NULL, *node;
 	size_t i;
 
 	printf("Start!\n");
@@ -18,7 +18,7 @@ bst_t *array_to_bst(int *array, size_t size)
 	if (array == NULL)
 		return (NULL);
 
-	root = bst_insert(NULL, array[0]);
+	root = bst_insert(&root, array[0]);
 	printf("array[0] value: %d\n", array[0]);
 	printf("root address: %p\n", (void *)root);
 	if (root == NULL)
