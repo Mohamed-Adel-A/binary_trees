@@ -22,7 +22,7 @@ bst_t *array_to_bst(int *array, size_t size)
 		return (NULL);
 	}
 
-	printf("root address: %d\n", root);
+	printf("root address: %p\n", root);
 	printf("root value: %d\n", root->n);
 	for (i = 1 ; i < size ; i++)
 	{
