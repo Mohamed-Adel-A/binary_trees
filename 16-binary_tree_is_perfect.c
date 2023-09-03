@@ -17,7 +17,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree);
 int binary_tree_is_full(const binary_tree_t *tree)
 {
 	binary_tree_t *current;
-	size_t left_ret = 0, right_ret = 0;
+	size_t left_ret = 0, right_ret = 0, left_balanced, right_balanced;
 
 	if (tree == NULL)
 		return (0);
@@ -26,16 +26,18 @@ int binary_tree_is_full(const binary_tree_t *tree)
 	if (current->left != NULL)
 	{
 		printf("tree_left: %d\n", tree->n);
-		left_ret = binary_tree_is_full(current->left) *
-			binary_tree_balance(current->left);
+		left_balanced = (binary_tree_balance(current->left) > 0) ? 0 : 1;
+		printf("balnced_left: %d\n", left_balanced);
+		left_ret = binary_tree_is_full(current->left) *	left_balanced;
 		left_ret *= 1;
 	}
 
 	if (current->right != NULL)
 	{
 		printf("tree_right: %d\n", tree->n);
-		right_ret = binary_tree_is_full(current->right) *
-			binary_tree_balance(current->right);
+		right_balanced = (binary_tree_balance(current->right) > 0) ? 0 : 1;
+		printf("balnced_right: %d\n", right_balanced);
+		right_ret = binary_tree_is_full(current->right) * right_balanced;
 		right_ret *= 1;
 	}
 
