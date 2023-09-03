@@ -25,25 +25,18 @@ int binary_tree_is_full(const binary_tree_t *tree)
 	current = (binary_tree_t *) tree;
 	if (current->left != NULL)
 	{
-		printf("tree_left: %d\n", tree->n);
 		left_balanced = (binary_tree_balance(current->left) > 0) ? 0 : 1;
-		printf("balnced_left: %ld\n", left_balanced);
 		left_ret = binary_tree_is_full(current->left) *	left_balanced;
 		left_ret *= 1;
 	}
 
 	if (current->right != NULL)
 	{
-		printf("tree_right: %d\n", tree->n);
 		right_balanced = (binary_tree_balance(current->right) > 0) ? 0 : 1;
-		printf("balnced_right: %ld\n", right_balanced);
 		right_ret = binary_tree_is_full(current->right) * right_balanced;
 		right_ret *= 1;
 	}
 
-	printf("tree: %d\n", tree->n);
-	printf("left_ret: %ld\n", left_ret);
-	printf("right_ret: %ld\n", right_ret);
 	if (left_ret == 0 && right_ret == 0)
 		return (1);
 
