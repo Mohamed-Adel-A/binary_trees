@@ -18,12 +18,14 @@ int binary_tree_is_full(const binary_tree_t *tree)
 	current = (binary_tree_t *) tree;
 	if (current->left != NULL)
 	{
+		printf("tree_left: %d\n", tree->n);
 		left_ret = binary_tree_is_full(current->left);
 		left_ret *= 1;
 	}
 
 	if (current->right != NULL)
 	{
+		printf("tree_right: %d\n", tree->n);
 		right_ret = binary_tree_is_full(current->right);
 		right_ret *= 1;
 	}
