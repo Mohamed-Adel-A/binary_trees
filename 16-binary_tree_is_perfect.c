@@ -28,6 +28,9 @@ int binary_tree_is_full(const binary_tree_t *tree)
 		right_ret *= 1;
 	}
 
+	printf("tree: &d\n", tree->n);
+	printf("left_ret: %d\n", left_ret);
+	printf("right_ret: %d\n", right_ret);
 	if (left_ret == 0 && right_ret == 0)
 		return (1);
 
