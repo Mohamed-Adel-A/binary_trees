@@ -25,13 +25,15 @@ int binary_tree_is_full(const binary_tree_t *tree)
 	current = (binary_tree_t *) tree;
 	if (current->left != NULL)
 	{
-		left_ret = binary_tree_is_full(current->left) * binary_tree_balance(current->left);
+		left_ret = binary_tree_is_full(current->left) *
+			binary_tree_balance(current->left);
 		left_ret *= 1;
 	}
 
 	if (current->right != NULL)
 	{
-		right_ret = binary_tree_is_full(current->right) * binary_tree_balance(current->right);
+		right_ret = binary_tree_is_full(current->right) *
+			binary_tree_balance(current->right);
 		right_ret *= 1;
 	}
 
